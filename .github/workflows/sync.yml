@@ -47,14 +47,19 @@ jobs:
       - name: Decide whether this release is already synced
         id: check
         run: |
-          REMOTE="$(node -p "require('/tmp/remote-manifest.json').version")"
-          CURRENT="$(node -p "require('./manifest.json').version" 2>/dev/null || echo none)"
-          echo "remote=$REMOTE current=$CURRENT"
-          if [ "$REMOTE" = "$CURRENT" ]; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
+          CHANGED="$(node -e "
+            const fs = require('fs');
+            const remote = JSON.parse(fs.readFileSync('/tmp/remote-manifest.json', 'utf8'));
+            let current = null;
+            try { current = JSON.parse(fs.readFileSync('manifest.json', 'utf8')); } catch {}
+            const hashes = (m) => JSON.stringify(
+              (m?.public_repo?.files ?? []).map((f) => [f.path, f.sha256]).sort((a, b) => a[0].localeCompare(b[0])),
+            );
+            // Compare the published file set, not only the version: a docs or
+            // install-script fix does not bump the runtime version but must sync.
+            console.log(remote.version, current?.version ?? 'none', !current || remote.version !== current.version || hashes(remote) !== hashes(current));
+          " | tail -1)"
+          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
 
       - name: Pull the files and verify their hashes
         if: steps.check.outputs.changed == 'true'
