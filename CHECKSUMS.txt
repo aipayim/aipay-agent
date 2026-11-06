@@ -1,1 +1,1 @@
-6d87aa36ad3beca5fadceed73e9f7bd1c63c960a3f9f445b5f859fbba128cb75  aipay-agent-1.25.1.tgz
+6198318cc7ddce3bad579f90133a275d0ee4500e95e87d3567c5993e17420cb6  aipay-agent-1.25.2.tgz
