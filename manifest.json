@@ -1,14 +1,14 @@
 {
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
-  "version": "1.25.0",
-  "generated_at": "2026-11-06T12:53:37.837Z",
+  "version": "1.25.1",
+  "generated_at": "2026-11-06T15:18:17.155Z",
   "node": ">=22.18",
   "tarball": {
-    "url": "https://aipay.im/downloads/aipay-agent-1.25.0.tgz",
-    "file": "aipay-agent-1.25.0.tgz",
-    "sha256": "422b6682e2ca2fe1e3e9b8e9e65c80c46ff8709eeae6b07821d8c7d0fb3df84f",
-    "bytes": 138336,
+    "url": "https://aipay.im/downloads/aipay-agent-1.25.1.tgz",
+    "file": "aipay-agent-1.25.1.tgz",
+    "sha256": "6d87aa36ad3beca5fadceed73e9f7bd1c63c960a3f9f445b5f859fbba128cb75",
+    "bytes": 138361,
     "root": "package/"
   },
   "entries": {
@@ -60,7 +60,7 @@
     {
       "path": "package.json",
       "bytes": 551,
-      "sha256": "7868682d184ce68014c292cb4a07904d7a7238854536b6b498058a986f616145"
+      "sha256": "ef072bc649cda32ef8ee0b59a2d08e0124f3839d3e42f9c493e750d52785648d"
     },
     {
       "path": "src/lib/abi.ts",
@@ -351,5 +351,45 @@
   "legacy": {
     "manifest": "CHECKSUMS.txt",
     "install": "install.sh"
+  },
+  "public_repo": {
+    "files": [
+      {
+        "path": "ALLOWLIST.txt",
+        "bytes": 77,
+        "sha256": "312bfb99a8080a525b2da978ffd204a210d43b37ada15434adec65728d7451ea"
+      },
+      {
+        "path": "CHECKSUMS.txt",
+        "bytes": 89,
+        "sha256": "5051b4d73ae554f2d871adce6303f618fa72fc50873f00c7d7257139a622c908"
+      },
+      {
+        "path": "DENYLIST.txt",
+        "bytes": 663,
+        "sha256": "63d8fe40e82f4b64e5d9bbaeab73979b7941a5a461125f6df6c99b1a391d1bd4"
+      },
+      {
+        "path": "install.sh",
+        "bytes": 1006,
+        "sha256": "45d4566453dd2081f1e0d1ee136fe687fd60635e7eeb59646453dd534333fbb0"
+      },
+      {
+        "path": "mcp.example.json",
+        "bytes": 301,
+        "sha256": "9895e99e6bf3dc316768fcc4c81d6da436fce9855b522fc40a9bd87ed8521c30"
+      },
+      {
+        "path": "README.md",
+        "bytes": 2775,
+        "sha256": "ec7de0948dbfd6007f788f3eaffec237362cc7c9b0be5d0f829f9d1cfeb0f90a"
+      },
+      {
+        "path": "SECURITY.md",
+        "bytes": 459,
+        "sha256": "a499f01adbd3c5d6293901a8d6ad69b97a7cb2a926e66dfdf95f91121c06409c"
+      }
+    ],
+    "sync": "the public repo pulls these from /downloads/pubrepo/ (see .github/workflows/sync.yml there)"
   }
 }
