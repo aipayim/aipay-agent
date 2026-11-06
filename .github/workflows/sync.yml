@@ -61,7 +61,9 @@ jobs:
             );
             // Compare the published file set, not only the version: a docs or
             // install-script fix does not bump the runtime version but must sync.
-            console.log(remote.version, current?.version ?? 'none', !current || remote.version !== current.version || hashes(remote) !== hashes(current));
+            // Only the boolean on stdout: this line is captured into a step output.
+            console.log(remote.version, current?.version ?? 'none');
+            console.log(!current || remote.version !== current.version || hashes(remote) !== hashes(current));
           " | tail -1)"
           echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
 
