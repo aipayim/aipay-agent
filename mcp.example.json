@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "aipay": {
+      "command": "node",
+      "args": [
+        "/home/you/.aipay/agent-dist/package/agent/mcp-server.mjs"
+      ],
+      "env": {
+        "AIPAY_AGENT_HOME": "/home/you/.aipay/agent",
+        "AIPAY_AGENT_PASSPHRASE": "set-in-your-environment"
+      }
+    }
+  }
+}
