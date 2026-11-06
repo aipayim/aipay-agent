@@ -1,0 +1,3 @@
+agent/**
+src/lib/**
+# reachable only from: agent/cli.ts, agent/mcp-server.ts
