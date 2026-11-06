@@ -1,14 +1,14 @@
 {
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
-  "version": "1.25.2",
-  "generated_at": "2026-11-06T15:50:36.705Z",
+  "version": "1.25.3",
+  "generated_at": "2026-11-06T17:45:27.990Z",
   "node": ">=22.18",
   "tarball": {
-    "url": "https://aipay.im/downloads/aipay-agent-1.25.2.tgz",
-    "file": "aipay-agent-1.25.2.tgz",
-    "sha256": "6198318cc7ddce3bad579f90133a275d0ee4500e95e87d3567c5993e17420cb6",
-    "bytes": 138354,
+    "url": "https://aipay.im/downloads/aipay-agent-1.25.3.tgz",
+    "file": "aipay-agent-1.25.3.tgz",
+    "sha256": "f402814f1d4e60062ce10139fd8affe9bbc451f5d88ed72d7ebc167fe6943e52",
+    "bytes": 138561,
     "root": "package/"
   },
   "entries": {
@@ -34,8 +34,8 @@
     },
     {
       "path": "agent/cli.ts",
-      "bytes": 31020,
-      "sha256": "513308fd6dca5a340526508fa2b7d32cd8c6646cc7a54cc0ee00d95b2b5c35e3"
+      "bytes": 31305,
+      "sha256": "1aaac8f9624c111b011bcf01e2be5d38f362ebbe4acbb0cf1d6b4c2acfd88ec9"
     },
     {
       "path": "agent/mcp-server.mjs",
@@ -60,7 +60,7 @@
     {
       "path": "package.json",
       "bytes": 551,
-      "sha256": "a1af775ced17a99fb42559408c0d2f9afcff2b1bc1a3666eeb58a65cf49b46e2"
+      "sha256": "0d770e4e98c164dc5bf3a5b968b0fdfcc09cbbd57c427f630a1db140ab5ee90e"
     },
     {
       "path": "src/lib/abi.ts",
@@ -362,7 +362,7 @@
       {
         "path": "CHECKSUMS.txt",
         "bytes": 89,
-        "sha256": "20b014c948489707bf96c95b960699ab3118aab0357bc66b11922ce61bc8723a"
+        "sha256": "d8afdfb9f31a8cec4e0346d2025353789f56a5b91c41e4f2edddc1e7c8439afd"
       },
       {
         "path": "DENYLIST.txt",
