@@ -1,0 +1,124 @@
+name: Sync distribution
+
+# Pull-based distribution sync.
+#
+# This repository carries no build logic: every release, the private AIPAY
+# repository publishes the sanitized runtime, the manifest and the install
+# script to https://aipay.im/downloads/pubrepo/. This workflow pulls that set,
+# verifies every file against the hashes in `manifest.json`, commits it, and
+# attaches the tarball to a release.
+#
+# Why pull instead of push: it needs no cross-repository token. The workflow uses
+# this repository's own GITHUB_TOKEN, so the only secret in the system stays in
+# the private repository (where it is not needed for this path at all).
+#
+# Workflow files are intentionally not synced: a GITHUB_TOKEN push may not create
+# or modify `.github/workflows/*`. This file is updated out of band.
+
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-dist
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch the published manifest
+        run: |
+          curl -fsSL --retry 3 https://aipay.im/downloads/pubrepo/manifest.json -o /tmp/remote-manifest.json
+          node -e "const m=require('/tmp/remote-manifest.json'); console.log('remote version:', m.version)"
+
+      - name: Decide whether this release is already synced
+        id: check
+        run: |
+          REMOTE="$(node -p "require('/tmp/remote-manifest.json').version")"
+          CURRENT="$(node -p "require('./manifest.json').version" 2>/dev/null || echo none)"
+          echo "remote=$REMOTE current=$CURRENT"
+          if [ "$REMOTE" = "$CURRENT" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Pull the files and verify their hashes
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          node --input-type=module - <<'NODE'
+          import { createHash } from 'node:crypto';
+          import { mkdir, writeFile } from 'node:fs/promises';
+          import path from 'node:path';
+
+          const base = 'https://aipay.im/downloads/pubrepo';
+          const manifest = await (await fetch(`${base}/manifest.json`)).json();
+          const expected = new Map(manifest.public_repo.files.map((file) => [file.path, file]));
+          if (expected.size === 0) throw new Error('manifest has no public_repo files');
+
+          for (const [file, entry] of expected) {
+            if (file.startsWith('.github/')) throw new Error(`refusing to sync a workflow file: ${file}`);
+            const response = await fetch(`${base}/${file}`);
+            if (!response.ok) throw new Error(`${file}: ${response.status}`);
+            const bytes = Buffer.from(await response.arrayBuffer());
+            const sha = createHash('sha256').update(bytes).digest('hex');
+            if (sha !== entry.sha256) throw new Error(`${file}: sha256 mismatch`);
+            const target = path.join(process.cwd(), file);
+            await mkdir(path.dirname(target), { recursive: true });
+            await writeFile(target, bytes);
+            console.log('verified', file, sha.slice(0, 12));
+          }
+          await writeFile('manifest.json', `${JSON.stringify(manifest, null, 2)}\n`);
+          NODE
+
+      - name: Verify the tarball before attaching it
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          FILE="$(node -p "require('/tmp/remote-manifest.json').tarball.file")"
+          SHA="$(node -p "require('/tmp/remote-manifest.json').tarball.sha256")"
+          curl -fsSL --retry 3 "https://aipay.im/downloads/$FILE" -o "/tmp/$FILE"
+          ACTUAL="$(sha256sum "/tmp/$FILE" | cut -d' ' -f1)"
+          test "$ACTUAL" = "$SHA"
+          echo "tarball $FILE verified ($SHA)"
+
+      - name: Commit and push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          VERSION="$(node -p "require('/tmp/remote-manifest.json').version")"
+          git commit -m "sync aipay-agent ${VERSION} (allowlisted runtime; hashes verified)"
+          git push
+
+      - name: Attach the tarball to a release
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="$(node -p "require('/tmp/remote-manifest.json').version")"
+          FILE="$(node -p "require('/tmp/remote-manifest.json').tarball.file")"
+          TAG="v$VERSION"
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "aipay-agent $VERSION" \
+              --notes "Sanitized agent runtime (allowlisted files only). Verify the sha256 in CHECKSUMS.txt before installing."
+          fi
+          gh release upload "$TAG" "/tmp/$FILE" --clobber
