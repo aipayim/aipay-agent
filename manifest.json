@@ -1,0 +1,355 @@
+{
+  "schema": "aipay-agent-distribution-v1",
+  "name": "aipay-agent",
+  "version": "1.25.0",
+  "generated_at": "2026-11-06T12:53:37.837Z",
+  "node": ">=22.18",
+  "tarball": {
+    "url": "https://aipay.im/downloads/aipay-agent-1.25.0.tgz",
+    "file": "aipay-agent-1.25.0.tgz",
+    "sha256": "422b6682e2ca2fe1e3e9b8e9e65c80c46ff8709eeae6b07821d8c7d0fb3df84f",
+    "bytes": 138336,
+    "root": "package/"
+  },
+  "entries": {
+    "cli": "package/agent/cli.mjs",
+    "mcp": "package/agent/mcp-server.mjs"
+  },
+  "dependencies": {
+    "@msg-chain/sdk": "file:vendor/msg-chain-sdk-0.1.0-alpha.2.tgz",
+    "@solana/pay": "^0.2.6",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "bignumber.js": "^9.3.1",
+    "bip39": "^3.1.0",
+    "dexie": "^4.3.0",
+    "ed25519-hd-key": "^1.3.0",
+    "ethers": "^6.16.0"
+  },
+  "files": [
+    {
+      "path": "agent/cli.mjs",
+      "bytes": 290,
+      "sha256": "377ede4ea981bf92b31766046cea28285cfa525f1a478584ebd28442778cdc68"
+    },
+    {
+      "path": "agent/cli.ts",
+      "bytes": 31020,
+      "sha256": "513308fd6dca5a340526508fa2b7d32cd8c6646cc7a54cc0ee00d95b2b5c35e3"
+    },
+    {
+      "path": "agent/mcp-server.mjs",
+      "bytes": 396,
+      "sha256": "d9a5dbab80ab6b8be944beb18ca6940ab6621a8717eaf8700dbe4337a41616c6"
+    },
+    {
+      "path": "agent/mcp-server.ts",
+      "bytes": 6965,
+      "sha256": "e20c6b3f071431fb6a6ab7ca2b2dbbf3ad257c0bd81f00151e9e47ba43094641"
+    },
+    {
+      "path": "agent/tools.ts",
+      "bytes": 40940,
+      "sha256": "f1c083e27abb6614967b933ff8785c36d663e47ff849110c6489686c1f6b58b5"
+    },
+    {
+      "path": "agent/ts-loader.mjs",
+      "bytes": 2261,
+      "sha256": "23e77a8b1796f939371b8ecb9fb5b5e1459be2363b71fc5fd427e7af2849631f"
+    },
+    {
+      "path": "package.json",
+      "bytes": 551,
+      "sha256": "7868682d184ce68014c292cb4a07904d7a7238854536b6b498058a986f616145"
+    },
+    {
+      "path": "src/lib/abi.ts",
+      "bytes": 690,
+      "sha256": "ff46ccb5b6e8d7bd31d1ddde5571ef7b0a1f9ae2f6487511096a6cd1e690659e"
+    },
+    {
+      "path": "src/lib/chains/msgConfig.ts",
+      "bytes": 20402,
+      "sha256": "62dd1f5231686ad8d208c46ab1bab64641f5762976b53a05d57a3a7d90e39541"
+    },
+    {
+      "path": "src/lib/chains/provider.ts",
+      "bytes": 2569,
+      "sha256": "5376cddabb1c0e9d4f7cab8aede7bafc40525390052f4f83f1c51eb0877440c8"
+    },
+    {
+      "path": "src/lib/chains/registry.ts",
+      "bytes": 12605,
+      "sha256": "71ad491881868bc8ec1aa6cbd39ee8ec7709763fcd8bb5874b5db17bd05ddd91"
+    },
+    {
+      "path": "src/lib/core/audit.ts",
+      "bytes": 3380,
+      "sha256": "7f1fecaa63bbea63efb50af0dce686b1a6ff277343bf357e2774491a0b7bb020"
+    },
+    {
+      "path": "src/lib/core/context.ts",
+      "bytes": 3224,
+      "sha256": "dd1644ff96b5f074f17ee9f4d2b58f7d0404ee4263839562e8d2e00a4acaf69b"
+    },
+    {
+      "path": "src/lib/core/errors.ts",
+      "bytes": 4474,
+      "sha256": "7ea09eecaebdd90f18fa833fb50191a300f8d4bbabe3dcbe826142d7e4b5e031"
+    },
+    {
+      "path": "src/lib/core/node.ts",
+      "bytes": 4718,
+      "sha256": "ff6b921b34c8548ebbb00216e3dfcf18f0d9d3469b682a2172e5e2f261f564a8"
+    },
+    {
+      "path": "src/lib/core/ops/merchantOps.ts",
+      "bytes": 9076,
+      "sha256": "d9d47833a717f8f6a14376d3631c3e25a0a26ae80a2673170a42b932f10f8fee"
+    },
+    {
+      "path": "src/lib/core/ops/paymentOps.ts",
+      "bytes": 35701,
+      "sha256": "8036e9ddf986ece65320413b8bdb57699208e3e4a594b272bac5d8ab6dcecdec"
+    },
+    {
+      "path": "src/lib/core/ops/paymentOptions.ts",
+      "bytes": 4438,
+      "sha256": "e00b935e118ff55a261889eb03e397e803981ac010def98f6fe07780b8254266"
+    },
+    {
+      "path": "src/lib/core/ops/policyOps.ts",
+      "bytes": 31995,
+      "sha256": "a8bb69f2fafc11ceeb81e73652c4a1177f88382d5e26ad393ab13a72b204558a"
+    },
+    {
+      "path": "src/lib/core/ops/walletOps.ts",
+      "bytes": 6005,
+      "sha256": "eed3db7f323149b5cfcc03138ce418c347a717977da62876e0d5cef5794e9821"
+    },
+    {
+      "path": "src/lib/core/policy/buildCapability.ts",
+      "bytes": 9326,
+      "sha256": "c81edb02367a045b259425cf9e63dab5cab31fe4d0a2e93b5230c35fe30b3722"
+    },
+    {
+      "path": "src/lib/core/policy/engine.ts",
+      "bytes": 13377,
+      "sha256": "6db08d3a17b4352958fa7cce8b1b7fdcb66837ba7d5a41e002e63c63351a47fe"
+    },
+    {
+      "path": "src/lib/core/policy/grant.ts",
+      "bytes": 27561,
+      "sha256": "58d05002509dad2a22de93501d560de5cab146800c893d245b5cd4827d392492"
+    },
+    {
+      "path": "src/lib/core/policy/grantTransport.ts",
+      "bytes": 5189,
+      "sha256": "d9bf6ef89cbcbb4bad0fe9dd28e1cdc0aa1d2dcfe8001843b99c62ee437cbcd4"
+    },
+    {
+      "path": "src/lib/core/policy/onchain.ts",
+      "bytes": 17445,
+      "sha256": "8c29271fefa7d2cc301e74dc5a6acc69a3ec980f3f113de5ddbe10fa087b14ca"
+    },
+    {
+      "path": "src/lib/core/policy/shadow.ts",
+      "bytes": 5902,
+      "sha256": "495ac4561d88b5c909d36407f578e2b1f40c1c4b2ecb01357fff0ec3f0d68965"
+    },
+    {
+      "path": "src/lib/core/policy/store.ts",
+      "bytes": 10158,
+      "sha256": "f9d7c01d0c61c92a64156b250557211cdb22735d69a9cd31d2f128a5881563c2"
+    },
+    {
+      "path": "src/lib/core/policy/types.ts",
+      "bytes": 9785,
+      "sha256": "9f27d721d70676e6b9a3ac956acd5c4765f3df3b5e4f32541f655242696b2828"
+    },
+    {
+      "path": "src/lib/core/policy/validation.ts",
+      "bytes": 2964,
+      "sha256": "3fd6f324f65851f7755a515e5e505ef79f41b08f64598ee51d7395196c4ef506"
+    },
+    {
+      "path": "src/lib/core/signer/approval.ts",
+      "bytes": 6013,
+      "sha256": "dc289e3ed6b8c147b0b671e9afba3a90c4c45ca99c83f98aa8e0248a7128a482"
+    },
+    {
+      "path": "src/lib/core/signer/approvalKey.ts",
+      "bytes": 3381,
+      "sha256": "94a98d625be8899aecc9de879fa173caba58a19962b498c5a4c7fa47e8817ad7"
+    },
+    {
+      "path": "src/lib/core/signer/derive.ts",
+      "bytes": 3308,
+      "sha256": "a6251251d09b2ce0b442d1cccc12f2a85e8132230203724201cddcc772985910"
+    },
+    {
+      "path": "src/lib/core/signer/keys.ts",
+      "bytes": 1759,
+      "sha256": "06430de5e6f50eacf631eabb0427600de306bb8d4f7830a5be7faea665e3d872"
+    },
+    {
+      "path": "src/lib/core/signer/keystore.ts",
+      "bytes": 7537,
+      "sha256": "528b0b1324be42867763dc90c3aea26227a9444263e77a71ba0ed7cb3090b06d"
+    },
+    {
+      "path": "src/lib/core/signer/providers.ts",
+      "bytes": 3301,
+      "sha256": "259ef93877a5c6864e396a1aa00e58807635cd9e31a99bf595d130ec11a99aa2"
+    },
+    {
+      "path": "src/lib/core/signer/types.ts",
+      "bytes": 1816,
+      "sha256": "52d75e1663827303daa6163e550b15d37a4ceb448c8b875681c6dbbfcfec2f9d"
+    },
+    {
+      "path": "src/lib/core/state/browser.ts",
+      "bytes": 1786,
+      "sha256": "b8ebf7229a8240709bdd56022863fdc38eb85deea123266276ccd173b5fc5935"
+    },
+    {
+      "path": "src/lib/core/state/file.ts",
+      "bytes": 12752,
+      "sha256": "efe32a55afb7b2d2cad523d2b6a3d527fd72ab8aca4c3c15b5be43720cb42c05"
+    },
+    {
+      "path": "src/lib/core/state/memory.ts",
+      "bytes": 10356,
+      "sha256": "03a03cb8ce04c8395349181fb9a0007d56647d476da71d1fe5c16b0d245cb8be"
+    },
+    {
+      "path": "src/lib/core/state/types.ts",
+      "bytes": 2197,
+      "sha256": "57aa7d3179717663d96baa6fccfcbbd2ad30291527101e604e45df94c5a85eca"
+    },
+    {
+      "path": "src/lib/history.ts",
+      "bytes": 7854,
+      "sha256": "0117f5ad7484418cffc1f84be6452c100679676c856a5ec4401b5dd84c0dcafd"
+    },
+    {
+      "path": "src/lib/merchantDb.ts",
+      "bytes": 8316,
+      "sha256": "43fb9425f7114450329d200d2bdd6410de246f9f55b6857a6188eb51a08c7b22"
+    },
+    {
+      "path": "src/lib/msg/address.ts",
+      "bytes": 2637,
+      "sha256": "c270f49037eeb255c400e32a25ef1d68d815caeea38e818b87e5277b5317eac7"
+    },
+    {
+      "path": "src/lib/msg/gas.ts",
+      "bytes": 12759,
+      "sha256": "ff7611dbd9fda975aea797cb5bf90f2a8255c2338f72bebd90622048e50a8e50"
+    },
+    {
+      "path": "src/lib/msg/sdk.ts",
+      "bytes": 23726,
+      "sha256": "55d1c438bf441aeb7328c677472fb2a2573a0daf806cb7b85aa89ac526acf3cc"
+    },
+    {
+      "path": "src/lib/msg/verify.ts",
+      "bytes": 18052,
+      "sha256": "e28696bb0bcf5d60aa9cd026d65e87ce9a159c664585dc8e5ff189ff29ab29e6"
+    },
+    {
+      "path": "src/lib/payment/listener.ts",
+      "bytes": 22222,
+      "sha256": "27687e1870ab7c2a05bdbb2f71b87d0d40f9410c8e7434135acde4b56eb21af2"
+    },
+    {
+      "path": "src/lib/payment/p2p.ts",
+      "bytes": 4937,
+      "sha256": "05a4d05a7d48c0ee7a43b04dfa7b637e843816686a31f1a54b5c81d90c104fbc"
+    },
+    {
+      "path": "src/lib/payment/payRequest.ts",
+      "bytes": 15726,
+      "sha256": "706f524461dfb5a03f72c7b6a19c2c6fc0ef388ca482e2cc04089fbd604db5a7"
+    },
+    {
+      "path": "src/lib/payment/precheck.ts",
+      "bytes": 11844,
+      "sha256": "2ec575a28ced92e4d46029f8ce8986a32f1bfb2789e133e47ec3fd5c220b63b8"
+    },
+    {
+      "path": "src/lib/payment/processor.ts",
+      "bytes": 8377,
+      "sha256": "5d41e63834704c7d6d725d43c0ff96b4df207d8bea4999184dbdb73ba92dc11c"
+    },
+    {
+      "path": "src/lib/payment/receive.ts",
+      "bytes": 1353,
+      "sha256": "a8027f68667453fc994aa18bf5be5fff1b86e7f9c7c40d3d594e41a87693e25b"
+    },
+    {
+      "path": "src/lib/payment/solanaPay.ts",
+      "bytes": 1990,
+      "sha256": "6ba55422e734626d21f4e09ecc81d20b63a8a0c1339d8a9babbd1d8473c1280b"
+    },
+    {
+      "path": "src/lib/static/paymentIntent.ts",
+      "bytes": 4934,
+      "sha256": "38e9e0f40ecf7b4bb23bdf9a789f20a2eed0385777d2323f07e51ff80214061a"
+    },
+    {
+      "path": "src/lib/tokens.ts",
+      "bytes": 5154,
+      "sha256": "6deeebb338138f7bd2a351663447c45a49b860f5d53b8860087f98742e865636"
+    },
+    {
+      "path": "src/lib/units.ts",
+      "bytes": 4450,
+      "sha256": "5a8383077c32a1504ee81e8e549d004abde6c1db493c06c32a98bcf689cc42c9"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 325,
+      "sha256": "4674b36b8a076cccb0ad469225b338cda7b1b82b1034fc0c952621dd2611e8c0"
+    }
+  ],
+  "policy": {
+    "mode": "allowlist",
+    "allow_paths": [
+      "agent/**",
+      "src/lib/**"
+    ],
+    "entry_points": [
+      "agent/cli.ts",
+      "agent/mcp-server.ts"
+    ],
+    "deny_paths": [
+      "(^|\\/)\\.env",
+      "(^|\\/)\\.git(\\/|$)",
+      "(^|\\/)\\.pi(\\/|$)",
+      "(^|\\/)\\.github(\\/|$)",
+      "^docs\\/",
+      "^contracts\\/",
+      "^public\\/",
+      "^scripts\\/",
+      "^vendor\\/",
+      "^tests?\\/",
+      "(^|\\/)node_modules(\\/|$)",
+      "(^|\\/)(id_rsa|id_ed25519|\\.npmrc|\\.netrc|keystore\\.json|approval\\.json|state\\.json)$"
+    ],
+    "deny_content": [
+      "github_pat",
+      "openai_key",
+      "nvidia_key",
+      "pem_block",
+      "telegram_bot",
+      "cloudflare_token",
+      "internal_secret"
+    ],
+    "note": "A file ships only if it is reachable from an entry point and lives under agent/ or src/lib/."
+  },
+  "legacy": {
+    "manifest": "CHECKSUMS.txt",
+    "install": "install.sh"
+  }
+}
