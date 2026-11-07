@@ -1,14 +1,14 @@
 {
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
-  "version": "1.25.3",
-  "generated_at": "2026-11-06T17:45:27.990Z",
+  "version": "1.26.0",
+  "generated_at": "2026-11-07T02:56:20.920Z",
   "node": ">=22.18",
   "tarball": {
-    "url": "https://aipay.im/downloads/aipay-agent-1.25.3.tgz",
-    "file": "aipay-agent-1.25.3.tgz",
-    "sha256": "f402814f1d4e60062ce10139fd8affe9bbc451f5d88ed72d7ebc167fe6943e52",
-    "bytes": 138561,
+    "url": "https://aipay.im/downloads/aipay-agent-1.26.0.tgz",
+    "file": "aipay-agent-1.26.0.tgz",
+    "sha256": "642215da19cb8a8d400f1c2f57d16f6e3162cbaa5735a73054db883f8d5c4fc9",
+    "bytes": 144283,
     "root": "package/"
   },
   "entries": {
@@ -34,8 +34,8 @@
     },
     {
       "path": "agent/cli.ts",
-      "bytes": 31305,
-      "sha256": "1aaac8f9624c111b011bcf01e2be5d38f362ebbe4acbb0cf1d6b4c2acfd88ec9"
+      "bytes": 38573,
+      "sha256": "c8cc3fb8894fbb0d81fe688a56f50c240172d22bc8b4096209ae5a1507f06fd4"
     },
     {
       "path": "agent/mcp-server.mjs",
@@ -49,8 +49,8 @@
     },
     {
       "path": "agent/tools.ts",
-      "bytes": 40940,
-      "sha256": "f1c083e27abb6614967b933ff8785c36d663e47ff849110c6489686c1f6b58b5"
+      "bytes": 41389,
+      "sha256": "c93658b951b8388f8f83c80ff70463bce8753f1e2e118329cba90eda256cf078"
     },
     {
       "path": "agent/ts-loader.mjs",
@@ -60,7 +60,7 @@
     {
       "path": "package.json",
       "bytes": 551,
-      "sha256": "0d770e4e98c164dc5bf3a5b968b0fdfcc09cbbd57c427f630a1db140ab5ee90e"
+      "sha256": "3b64d5e4e1436af3f55efff6bfb052297eed6da07bae7fff25e9e3985ef902d6"
     },
     {
       "path": "src/lib/abi.ts",
@@ -119,8 +119,8 @@
     },
     {
       "path": "src/lib/core/ops/policyOps.ts",
-      "bytes": 31995,
-      "sha256": "a8bb69f2fafc11ceeb81e73652c4a1177f88382d5e26ad393ab13a72b204558a"
+      "bytes": 33034,
+      "sha256": "b90d68dc6fafbfc7ed830b065ef78e97fe17bce51bbf89a3108858e9f96cec21"
     },
     {
       "path": "src/lib/core/ops/walletOps.ts",
@@ -129,8 +129,13 @@
     },
     {
       "path": "src/lib/core/policy/buildCapability.ts",
-      "bytes": 9326,
-      "sha256": "c81edb02367a045b259425cf9e63dab5cab31fe4d0a2e93b5230c35fe30b3722"
+      "bytes": 9486,
+      "sha256": "4a5a3671a7533015cbe76eca293293f89e038ac86436fe1f6c9335ab3682f236"
+    },
+    {
+      "path": "src/lib/core/policy/bundle.ts",
+      "bytes": 5635,
+      "sha256": "cdc0a510f518b95a38b967bf65f6a5fb09bc0cb46cb15cffacbd79e10fe6e332"
     },
     {
       "path": "src/lib/core/policy/engine.ts",
@@ -171,6 +176,11 @@
       "path": "src/lib/core/policy/validation.ts",
       "bytes": 2964,
       "sha256": "3fd6f324f65851f7755a515e5e505ef79f41b08f64598ee51d7395196c4ef506"
+    },
+    {
+      "path": "src/lib/core/policy/warnings.ts",
+      "bytes": 6051,
+      "sha256": "ebff1289c1ad5b540b80ced91f949500607ba10a3fa7f7414688ff3d41df39cf"
     },
     {
       "path": "src/lib/core/signer/approval.ts",
@@ -362,7 +372,7 @@
       {
         "path": "CHECKSUMS.txt",
         "bytes": 89,
-        "sha256": "d8afdfb9f31a8cec4e0346d2025353789f56a5b91c41e4f2edddc1e7c8439afd"
+        "sha256": "9ae00057dc5f6c47c4c3301344798bb3119670ab08a349e59e3599e959610583"
       },
       {
         "path": "DENYLIST.txt",
