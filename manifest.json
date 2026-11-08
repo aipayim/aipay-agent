@@ -1,14 +1,14 @@
 {
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
-  "version": "1.29.1",
-  "generated_at": "2026-11-08T13:47:36.474Z",
+  "version": "1.30.0",
+  "generated_at": "2026-11-08T18:09:59.111Z",
   "node": ">=22.18",
   "tarball": {
-    "url": "https://aipay.im/downloads/aipay-agent-1.29.1.tgz",
-    "file": "aipay-agent-1.29.1.tgz",
-    "sha256": "fadf6b96e975c0f2c3aa967aeeb3d7c7bae9c26bc1453c2b5b9b0f53a472cca1",
-    "bytes": 145086,
+    "url": "https://aipay.im/downloads/aipay-agent-1.30.0.tgz",
+    "file": "aipay-agent-1.30.0.tgz",
+    "sha256": "466a2def5245765bd633996c79a18a1ad77bdfa1496b1cd9c9e7710e6ae9644f",
+    "bytes": 159026,
     "root": "package/"
   },
   "entries": {
@@ -22,6 +22,7 @@
     "@solana/web3.js": "^1.98.4",
     "bignumber.js": "^9.3.1",
     "bip39": "^3.1.0",
+    "bs58": "4.0.1",
     "dexie": "^4.3.0",
     "ed25519-hd-key": "^1.3.0",
     "ethers": "^6.16.0"
@@ -59,8 +60,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 551,
-      "sha256": "b92c446b2db398b24f8c0e87233ff3ddbba9498ea6cbe26d7e7976defc9985f0"
+      "bytes": 572,
+      "sha256": "85ffcbc75d3c9afb94540ac216e3364a6ab592b15b5c827bba101a9454c9b480"
     },
     {
       "path": "src/lib/abi.ts",
@@ -79,8 +80,8 @@
     },
     {
       "path": "src/lib/chains/registry.ts",
-      "bytes": 14200,
-      "sha256": "c17330aea8753d511c23e565433152cd5862dd4180704309cb300ae0d54c8bba"
+      "bytes": 15541,
+      "sha256": "ecfc2defb09781c458e5d809b20d80c85b82dc3b1b6bbb33ec981896ab213fc5"
     },
     {
       "path": "src/lib/core/audit.ts",
@@ -109,13 +110,13 @@
     },
     {
       "path": "src/lib/core/ops/paymentOps.ts",
-      "bytes": 35701,
-      "sha256": "8036e9ddf986ece65320413b8bdb57699208e3e4a594b272bac5d8ab6dcecdec"
+      "bytes": 35710,
+      "sha256": "b1eb1145b033890a8eac0a55faf984bca092ac62c658dc1eafb226b1997c266b"
     },
     {
       "path": "src/lib/core/ops/paymentOptions.ts",
-      "bytes": 4438,
-      "sha256": "e00b935e118ff55a261889eb03e397e803981ac010def98f6fe07780b8254266"
+      "bytes": 4456,
+      "sha256": "12a395ed090b525c63c4aa5d1d8da9b5e87228c31e4c46ce1221868f77a66048"
     },
     {
       "path": "src/lib/core/ops/policyOps.ts",
@@ -124,8 +125,8 @@
     },
     {
       "path": "src/lib/core/ops/walletOps.ts",
-      "bytes": 6005,
-      "sha256": "eed3db7f323149b5cfcc03138ce418c347a717977da62876e0d5cef5794e9821"
+      "bytes": 6066,
+      "sha256": "8e67b081bd63750f977a34727f3fc47c85c982d2261c45791efe4166df7b53d0"
     },
     {
       "path": "src/lib/core/policy/buildCapability.ts",
@@ -194,13 +195,13 @@
     },
     {
       "path": "src/lib/core/signer/derive.ts",
-      "bytes": 3308,
-      "sha256": "a6251251d09b2ce0b442d1cccc12f2a85e8132230203724201cddcc772985910"
+      "bytes": 3668,
+      "sha256": "71ae82de8e87ba8e53211950fb1dba0c92a26a1708c6575252c5ea3a68e6c06e"
     },
     {
       "path": "src/lib/core/signer/keys.ts",
-      "bytes": 1759,
-      "sha256": "06430de5e6f50eacf631eabb0427600de306bb8d4f7830a5be7faea665e3d872"
+      "bytes": 1785,
+      "sha256": "b243f8f1e2334078684aac8007a8bf5109882857d4b874985fb44232817e8532"
     },
     {
       "path": "src/lib/core/signer/keystore.ts",
@@ -239,8 +240,8 @@
     },
     {
       "path": "src/lib/history.ts",
-      "bytes": 8115,
-      "sha256": "bfa337f448ba0a918c9857d518f7760bc0c93dd53c3dd80d1ee0d2628a2b90aa"
+      "bytes": 10680,
+      "sha256": "4f4b78dc823fc0fd15fe70a9e322b4c293885809ebdb5449708c72b29d63777c"
     },
     {
       "path": "src/lib/merchantDb.ts",
@@ -269,33 +270,33 @@
     },
     {
       "path": "src/lib/payment/listener.ts",
-      "bytes": 22222,
-      "sha256": "27687e1870ab7c2a05bdbb2f71b87d0d40f9410c8e7434135acde4b56eb21af2"
+      "bytes": 25818,
+      "sha256": "19ea3da20c20b71b845baf992bd201bd084122328eb525645f0b9b915ab1b35b"
     },
     {
       "path": "src/lib/payment/p2p.ts",
-      "bytes": 4937,
-      "sha256": "05a4d05a7d48c0ee7a43b04dfa7b637e843816686a31f1a54b5c81d90c104fbc"
+      "bytes": 6006,
+      "sha256": "13459e9599f15b22d4bbfc429ec26efdaa3f1a9055742bd2b9991ee9186075b4"
     },
     {
       "path": "src/lib/payment/payRequest.ts",
-      "bytes": 15726,
-      "sha256": "706f524461dfb5a03f72c7b6a19c2c6fc0ef388ca482e2cc04089fbd604db5a7"
+      "bytes": 17670,
+      "sha256": "a6a37a3ef8fac17ef36c32b3ef48de3343264d3aa1335e06769c1498fa19ebb3"
     },
     {
       "path": "src/lib/payment/precheck.ts",
-      "bytes": 11844,
-      "sha256": "2ec575a28ced92e4d46029f8ce8986a32f1bfb2789e133e47ec3fd5c220b63b8"
+      "bytes": 12022,
+      "sha256": "86c1a10871fa574e32b79afc52387310caaf6953b1dc4af2a18fceed1554d5a8"
     },
     {
       "path": "src/lib/payment/processor.ts",
-      "bytes": 8377,
-      "sha256": "5d41e63834704c7d6d725d43c0ff96b4df207d8bea4999184dbdb73ba92dc11c"
+      "bytes": 8786,
+      "sha256": "3819eea8bf376a04648500f2b7d00ed3560b28fd91122c1a8d811ded0948f7bf"
     },
     {
       "path": "src/lib/payment/receive.ts",
-      "bytes": 1353,
-      "sha256": "a8027f68667453fc994aa18bf5be5fff1b86e7f9c7c40d3d594e41a87693e25b"
+      "bytes": 1554,
+      "sha256": "48f58d88eeb4fa2562c83c8ebec2afce38f23d5be1e28211b60f856cd3bb0153"
     },
     {
       "path": "src/lib/payment/solanaPay.ts",
@@ -304,13 +305,48 @@
     },
     {
       "path": "src/lib/static/paymentIntent.ts",
-      "bytes": 4934,
-      "sha256": "38e9e0f40ecf7b4bb23bdf9a789f20a2eed0385777d2323f07e51ff80214061a"
+      "bytes": 5512,
+      "sha256": "71e95958c0225f656e870f6bdc9c1ab975267d76b91ad535c5755d06905b2bb5"
     },
     {
       "path": "src/lib/tokens.ts",
-      "bytes": 5687,
-      "sha256": "5e94dfbca22a9c2209df335add273b5b97019be654d1ba197a86bee53953b10f"
+      "bytes": 6181,
+      "sha256": "635a667511e638343658c3337bcdedc79253627fccdcb71c636aa0b94a81ec82"
+    },
+    {
+      "path": "src/lib/tron/address.ts",
+      "bytes": 3101,
+      "sha256": "9cae90cbf7e2d8df3dafd67c6f497d43a98904904286f79a0db54555241d9001"
+    },
+    {
+      "path": "src/lib/tron/api.ts",
+      "bytes": 15565,
+      "sha256": "c7f9a321c7ccd9732f36b79202538d342ce359c846b585d134e2f34d290b7e92"
+    },
+    {
+      "path": "src/lib/tron/balance.ts",
+      "bytes": 1734,
+      "sha256": "06352050b4122e2f46c13756c7e6f3c4950ce89129072cba9123afc073485661"
+    },
+    {
+      "path": "src/lib/tron/sha256.ts",
+      "bytes": 3681,
+      "sha256": "64ed64ba1d520277a5fc565680c2641746b772248dc95ea3ff3f666e8d427077"
+    },
+    {
+      "path": "src/lib/tron/signer.ts",
+      "bytes": 2618,
+      "sha256": "d08fb86da109156c807f117b8e484ac93ece945c22dbeaffaf6f9e662f1ddfad"
+    },
+    {
+      "path": "src/lib/tron/transfer.ts",
+      "bytes": 3910,
+      "sha256": "860a14d99f7efa1f330da0a2509618a1b88e9c462720c31068280ad462c234ca"
+    },
+    {
+      "path": "src/lib/tron/verify.ts",
+      "bytes": 3761,
+      "sha256": "e509e4315ca71206a36dc3f9da3b6e6ed8f032e29e3154aa846830d4c4362f91"
     },
     {
       "path": "src/lib/units.ts",
@@ -372,7 +408,7 @@
       {
         "path": "CHECKSUMS.txt",
         "bytes": 89,
-        "sha256": "bdf1d3bf70849002bd60680c5b82b653bbaa0abec0a756081d9ee43e4bf76fd7"
+        "sha256": "1fe5cea1b77ee0e1740d4125c016205030324e3d829f709fbf85f426e87a835b"
       },
       {
         "path": "DENYLIST.txt",
