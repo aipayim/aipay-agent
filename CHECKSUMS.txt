@@ -1,1 +1,1 @@
-6bbc5d4af5502810e0ac3a71a0316f498cd89f21e63a52e75351189db11c82a9  aipay-agent-1.29.0.tgz
+fadf6b96e975c0f2c3aa967aeeb3d7c7bae9c26bc1453c2b5b9b0f53a472cca1  aipay-agent-1.29.1.tgz
