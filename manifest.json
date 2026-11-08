@@ -1,14 +1,14 @@
 {
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
-  "version": "1.28.1",
-  "generated_at": "2026-11-07T15:22:10.317Z",
+  "version": "1.29.0",
+  "generated_at": "2026-11-08T06:06:45.824Z",
   "node": ">=22.18",
   "tarball": {
-    "url": "https://aipay.im/downloads/aipay-agent-1.28.1.tgz",
-    "file": "aipay-agent-1.28.1.tgz",
-    "sha256": "7e760cfb1581eb5e907659409d6b04883963d3e9aaea54c18a08a7f8040b349a",
-    "bytes": 144307,
+    "url": "https://aipay.im/downloads/aipay-agent-1.29.0.tgz",
+    "file": "aipay-agent-1.29.0.tgz",
+    "sha256": "6bbc5d4af5502810e0ac3a71a0316f498cd89f21e63a52e75351189db11c82a9",
+    "bytes": 145072,
     "root": "package/"
   },
   "entries": {
@@ -60,7 +60,7 @@
     {
       "path": "package.json",
       "bytes": 551,
-      "sha256": "1baac4d632fcb70f9143fcc695d064751ce79150773cb73f1313bc156ebdfcb8"
+      "sha256": "7807a8efd15b5b16784d7b62e7f55d0c8dc26d106b0aa1408d765fca10a27ece"
     },
     {
       "path": "src/lib/abi.ts",
@@ -79,8 +79,8 @@
     },
     {
       "path": "src/lib/chains/registry.ts",
-      "bytes": 12605,
-      "sha256": "71ad491881868bc8ec1aa6cbd39ee8ec7709763fcd8bb5874b5db17bd05ddd91"
+      "bytes": 14200,
+      "sha256": "c17330aea8753d511c23e565433152cd5862dd4180704309cb300ae0d54c8bba"
     },
     {
       "path": "src/lib/core/audit.ts",
@@ -239,8 +239,8 @@
     },
     {
       "path": "src/lib/history.ts",
-      "bytes": 7854,
-      "sha256": "0117f5ad7484418cffc1f84be6452c100679676c856a5ec4401b5dd84c0dcafd"
+      "bytes": 8115,
+      "sha256": "bfa337f448ba0a918c9857d518f7760bc0c93dd53c3dd80d1ee0d2628a2b90aa"
     },
     {
       "path": "src/lib/merchantDb.ts",
@@ -309,8 +309,8 @@
     },
     {
       "path": "src/lib/tokens.ts",
-      "bytes": 5154,
-      "sha256": "6deeebb338138f7bd2a351663447c45a49b860f5d53b8860087f98742e865636"
+      "bytes": 5687,
+      "sha256": "5e94dfbca22a9c2209df335add273b5b97019be654d1ba197a86bee53953b10f"
     },
     {
       "path": "src/lib/units.ts",
@@ -372,7 +372,7 @@
       {
         "path": "CHECKSUMS.txt",
         "bytes": 89,
-        "sha256": "9c6774caa9b0a45785affaf18be54e8b90eefe47793f6297ec4e9c4e3abd6c13"
+        "sha256": "b291991b71eb5ce6d528a3bf49ca65d6d7f71bc377d6552f0bda47986ea5d9b9"
       },
       {
         "path": "DENYLIST.txt",
