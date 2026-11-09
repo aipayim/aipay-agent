@@ -1,14 +1,14 @@
 {
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
-  "version": "1.30.0",
-  "generated_at": "2026-11-08T18:09:59.111Z",
+  "version": "1.30.1",
+  "generated_at": "2026-11-09T03:46:28.981Z",
   "node": ">=22.18",
   "tarball": {
-    "url": "https://aipay.im/downloads/aipay-agent-1.30.0.tgz",
-    "file": "aipay-agent-1.30.0.tgz",
-    "sha256": "466a2def5245765bd633996c79a18a1ad77bdfa1496b1cd9c9e7710e6ae9644f",
-    "bytes": 159026,
+    "url": "https://aipay.im/downloads/aipay-agent-1.30.1.tgz",
+    "file": "aipay-agent-1.30.1.tgz",
+    "sha256": "5116284fe105ac84f94767aca832ca758c8532ffb1f19470a79f678b623617d9",
+    "bytes": 159025,
     "root": "package/"
   },
   "entries": {
@@ -61,7 +61,7 @@
     {
       "path": "package.json",
       "bytes": 572,
-      "sha256": "85ffcbc75d3c9afb94540ac216e3364a6ab592b15b5c827bba101a9454c9b480"
+      "sha256": "b18e1f3955b760321d7c41c6358dd66fbd41455b12b245dbdfbd5e32dc1d597e"
     },
     {
       "path": "src/lib/abi.ts",
@@ -408,7 +408,7 @@
       {
         "path": "CHECKSUMS.txt",
         "bytes": 89,
-        "sha256": "1fe5cea1b77ee0e1740d4125c016205030324e3d829f709fbf85f426e87a835b"
+        "sha256": "df632485f3280e4994b7c070338aadef4b2f7e367c1c0b84bb41b0929afe443a"
       },
       {
         "path": "DENYLIST.txt",
