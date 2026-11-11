@@ -2,13 +2,13 @@
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
   "version": "1.31.0",
-  "generated_at": "2026-11-11T03:29:39.772Z",
+  "generated_at": "2026-11-11T12:20:25.708Z",
   "node": ">=22.18",
   "tarball": {
     "url": "https://aipay.im/downloads/aipay-agent-1.31.0.tgz",
     "file": "aipay-agent-1.31.0.tgz",
-    "sha256": "aeaafaeb6572401fca418f88ba8b9a854414721b16bdf4d3d9e6ee221f4a0db7",
-    "bytes": 164227,
+    "sha256": "87a735f4412983b625cea114cfde22f01a583c60566ad6ae2ebca0c45c10ba54",
+    "bytes": 164367,
     "root": "package/"
   },
   "entries": {
@@ -55,8 +55,8 @@
     },
     {
       "path": "agent/tools.ts",
-      "bytes": 41389,
-      "sha256": "c93658b951b8388f8f83c80ff70463bce8753f1e2e118329cba90eda256cf078"
+      "bytes": 41767,
+      "sha256": "b64f2a4a552c0160506cc67a68456596fe7a2d9a994880a7fafd3a446cb1bfd4"
     },
     {
       "path": "agent/ts-loader.mjs",
@@ -413,7 +413,7 @@
       {
         "path": "CHECKSUMS.txt",
         "bytes": 89,
-        "sha256": "d890ed389c040720bdac41c9fe0edc8d385b8b286aee46690b829d793dc05c8f"
+        "sha256": "7b3f34ccb4c83cb79de8265b4f10611f0640fe83b93e15917b180196b017b1f9"
       },
       {
         "path": "DENYLIST.txt",
