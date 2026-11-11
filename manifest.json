@@ -1,14 +1,14 @@
 {
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
-  "version": "1.30.1",
-  "generated_at": "2026-11-09T03:46:28.981Z",
+  "version": "1.31.0",
+  "generated_at": "2026-11-11T03:29:39.772Z",
   "node": ">=22.18",
   "tarball": {
-    "url": "https://aipay.im/downloads/aipay-agent-1.30.1.tgz",
-    "file": "aipay-agent-1.30.1.tgz",
-    "sha256": "5116284fe105ac84f94767aca832ca758c8532ffb1f19470a79f678b623617d9",
-    "bytes": 159025,
+    "url": "https://aipay.im/downloads/aipay-agent-1.31.0.tgz",
+    "file": "aipay-agent-1.31.0.tgz",
+    "sha256": "aeaafaeb6572401fca418f88ba8b9a854414721b16bdf4d3d9e6ee221f4a0db7",
+    "bytes": 164227,
     "root": "package/"
   },
   "entries": {
@@ -35,8 +35,8 @@
     },
     {
       "path": "agent/cli.ts",
-      "bytes": 38573,
-      "sha256": "c8cc3fb8894fbb0d81fe688a56f50c240172d22bc8b4096209ae5a1507f06fd4"
+      "bytes": 42243,
+      "sha256": "9db6c5009f030215050ef8979e8b393c0015a402d0cd18a603bfb78bcdff5845"
     },
     {
       "path": "agent/mcp-server.mjs",
@@ -47,6 +47,11 @@
       "path": "agent/mcp-server.ts",
       "bytes": 6965,
       "sha256": "e20c6b3f071431fb6a6ab7ca2b2dbbf3ad257c0bd81f00151e9e47ba43094641"
+    },
+    {
+      "path": "agent/merchant.ts",
+      "bytes": 12525,
+      "sha256": "35ff88735340277345c66ea129cc75ead4c97ec4743575fabba361454fafd5df"
     },
     {
       "path": "agent/tools.ts",
@@ -61,7 +66,7 @@
     {
       "path": "package.json",
       "bytes": 572,
-      "sha256": "b18e1f3955b760321d7c41c6358dd66fbd41455b12b245dbdfbd5e32dc1d597e"
+      "sha256": "d4b4827b0e4dc5425a1bd7df501790a414ee9c2e2dcb6acc5d594535f6ff4331"
     },
     {
       "path": "src/lib/abi.ts",
@@ -245,8 +250,8 @@
     },
     {
       "path": "src/lib/merchantDb.ts",
-      "bytes": 8316,
-      "sha256": "43fb9425f7114450329d200d2bdd6410de246f9f55b6857a6188eb51a08c7b22"
+      "bytes": 10431,
+      "sha256": "23ecec5e559c4c69d139d6db0f1fd27b7e9bcf2b94e9febbb5987257534cbb79"
     },
     {
       "path": "src/lib/msg/address.ts",
@@ -408,7 +413,7 @@
       {
         "path": "CHECKSUMS.txt",
         "bytes": 89,
-        "sha256": "df632485f3280e4994b7c070338aadef4b2f7e367c1c0b84bb41b0929afe443a"
+        "sha256": "d890ed389c040720bdac41c9fe0edc8d385b8b286aee46690b829d793dc05c8f"
       },
       {
         "path": "DENYLIST.txt",
