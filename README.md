@@ -15,6 +15,9 @@ implementation is not public. Nothing in this repository can move funds on its o
   shipped file with its hash, and the allow/deny rules used to build it.
 - `ALLOWLIST.txt` / `DENYLIST.txt` — the same rules in human-readable form.
 - `mcp.example.json` — an MCP client entry you can copy.
+- `sdk/aipay-watch/` + `install-sdk.sh` — the merchant-side watcher SDK (its own
+  tarball, same verified-sha256 model). It discovers a payment with your own RPC
+  quota and reports only the transaction hash; AIPAY still verifies it.
 
 ## Install (Node.js >= 22.18)
 

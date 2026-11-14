@@ -2,7 +2,7 @@
   "schema": "aipay-agent-distribution-v1",
   "name": "aipay-agent",
   "version": "1.31.0",
-  "generated_at": "2026-11-11T12:20:25.708Z",
+  "generated_at": "2026-11-14T00:22:34.300Z",
   "node": ">=22.18",
   "tarball": {
     "url": "https://aipay.im/downloads/aipay-agent-1.31.0.tgz",
@@ -403,22 +403,86 @@
     "manifest": "CHECKSUMS.txt",
     "install": "install.sh"
   },
+  "sdk": {
+    "name": "aipay-watch",
+    "version": "0.1.0",
+    "tarball": {
+      "url": "https://aipay.im/downloads/aipay-watch-0.1.0.tgz",
+      "file": "aipay-watch-0.1.0.tgz",
+      "sha256": "358e02010f03245d003ebfeb5a597871db26e1f6b248dbd4bc1f4a4a87612f46",
+      "bytes": 12042,
+      "root": "package/"
+    },
+    "entries": {
+      "cli": "package/bin/aipay-watch.mjs"
+    },
+    "install": "install-sdk.sh",
+    "source_dir": "sdk/aipay-watch",
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 4173,
+        "sha256": "3312650d0d97a8722702c349a1c3d39249ee66d3285953e7f7d81958f5c8326a"
+      },
+      {
+        "path": "bin/aipay-watch.mjs",
+        "bytes": 6877,
+        "sha256": "130f5367dbbe29e311ec881ee6fd109bc8559c66c4e97f343e1b6ed2844b0b45"
+      },
+      {
+        "path": "package.json",
+        "bytes": 529,
+        "sha256": "79e19a8526f16fe6f54bed5ef23f2b817e8102b98cb51eeb0fadd2b4d2d98e77"
+      },
+      {
+        "path": "src/api.mjs",
+        "bytes": 3595,
+        "sha256": "adffc384655972046ee384983152f1e9e2058136ffd92b2fa7d730ee5a07e972"
+      },
+      {
+        "path": "src/evm.mjs",
+        "bytes": 4191,
+        "sha256": "59c61e4960406ebd79f5656bc4056fd22f9028aa567152c0a66ef99520be5ed5"
+      },
+      {
+        "path": "src/index.mjs",
+        "bytes": 381,
+        "sha256": "9ce724731771b5023cc9981a3d96953a66c9c782744b0ed2209fdbea05a6ccb2"
+      },
+      {
+        "path": "src/solana.mjs",
+        "bytes": 4510,
+        "sha256": "3fe1fa360a3512e375f353e3c7ce05c988e7ee16e4261e3a72f235b5024b50d9"
+      },
+      {
+        "path": "src/watch.mjs",
+        "bytes": 12616,
+        "sha256": "5d167198f532044a67112d212df5b1d21967270d1d19c4ab7e6bb232fa6df8f7"
+      }
+    ],
+    "note": "Reports a tx hash to POST /v1/orders/:reference/confirm; the server still verifies it."
+  },
   "public_repo": {
     "files": [
       {
         "path": "ALLOWLIST.txt",
-        "bytes": 77,
-        "sha256": "312bfb99a8080a525b2da978ffd204a210d43b37ada15434adec65728d7451ea"
+        "bytes": 133,
+        "sha256": "0c4f2fc90a472104a9a9ea3d47be3e6192a87b066732201984b4cb2881a2095b"
       },
       {
         "path": "CHECKSUMS.txt",
-        "bytes": 89,
-        "sha256": "7b3f34ccb4c83cb79de8265b4f10611f0640fe83b93e15917b180196b017b1f9"
+        "bytes": 177,
+        "sha256": "8252dd9e8e5712806c9445424ca318682ff806e09f8b4ac9f6262d6f0b561d81"
       },
       {
         "path": "DENYLIST.txt",
         "bytes": 663,
         "sha256": "63d8fe40e82f4b64e5d9bbaeab73979b7941a5a461125f6df6c99b1a391d1bd4"
+      },
+      {
+        "path": "install-sdk.sh",
+        "bytes": 1774,
+        "sha256": "4f6eed5686167f28aa9e8adac652fb3c488f11ef680d6b69b6f9704f4295019a"
       },
       {
         "path": "install.sh",
@@ -432,8 +496,53 @@
       },
       {
         "path": "README.md",
-        "bytes": 2775,
-        "sha256": "ec7de0948dbfd6007f788f3eaffec237362cc7c9b0be5d0f829f9d1cfeb0f90a"
+        "bytes": 3011,
+        "sha256": "06eaa687244cceb0dceb22d960b0b01568e724a7967ef4cf58a30e27ab0bb355"
+      },
+      {
+        "path": "sdk/aipay-watch/bin/aipay-watch.mjs",
+        "bytes": 6877,
+        "sha256": "130f5367dbbe29e311ec881ee6fd109bc8559c66c4e97f343e1b6ed2844b0b45"
+      },
+      {
+        "path": "sdk/aipay-watch/dist.json",
+        "bytes": 2908,
+        "sha256": "1b4b73904f4443c0e09e56b8b8d1e747f99d08d6216be641ea1b92a69e4b3359"
+      },
+      {
+        "path": "sdk/aipay-watch/package.json",
+        "bytes": 529,
+        "sha256": "79e19a8526f16fe6f54bed5ef23f2b817e8102b98cb51eeb0fadd2b4d2d98e77"
+      },
+      {
+        "path": "sdk/aipay-watch/README.md",
+        "bytes": 4173,
+        "sha256": "3312650d0d97a8722702c349a1c3d39249ee66d3285953e7f7d81958f5c8326a"
+      },
+      {
+        "path": "sdk/aipay-watch/src/api.mjs",
+        "bytes": 3595,
+        "sha256": "adffc384655972046ee384983152f1e9e2058136ffd92b2fa7d730ee5a07e972"
+      },
+      {
+        "path": "sdk/aipay-watch/src/evm.mjs",
+        "bytes": 4191,
+        "sha256": "59c61e4960406ebd79f5656bc4056fd22f9028aa567152c0a66ef99520be5ed5"
+      },
+      {
+        "path": "sdk/aipay-watch/src/index.mjs",
+        "bytes": 381,
+        "sha256": "9ce724731771b5023cc9981a3d96953a66c9c782744b0ed2209fdbea05a6ccb2"
+      },
+      {
+        "path": "sdk/aipay-watch/src/solana.mjs",
+        "bytes": 4510,
+        "sha256": "3fe1fa360a3512e375f353e3c7ce05c988e7ee16e4261e3a72f235b5024b50d9"
+      },
+      {
+        "path": "sdk/aipay-watch/src/watch.mjs",
+        "bytes": 12616,
+        "sha256": "5d167198f532044a67112d212df5b1d21967270d1d19c4ab7e6bb232fa6df8f7"
       },
       {
         "path": "SECURITY.md",

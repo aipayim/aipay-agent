@@ -1,0 +1,97 @@
+{
+  "schema": "aipay-watch-distribution-v1",
+  "name": "aipay-watch",
+  "version": "0.1.0",
+  "node": ">=22.18",
+  "generated_at": "2026-11-14T00:22:33.504Z",
+  "tarball": {
+    "url": "https://aipay.im/downloads/aipay-watch-0.1.0.tgz",
+    "file": "aipay-watch-0.1.0.tgz",
+    "sha256": "358e02010f03245d003ebfeb5a597871db26e1f6b248dbd4bc1f4a4a87612f46",
+    "bytes": 12042,
+    "root": "package/"
+  },
+  "entries": {
+    "cli": "package/bin/aipay-watch.mjs"
+  },
+  "source": {
+    "repo": "https://github.com/aipayim/aipay-agent",
+    "dir": "sdk/aipay-watch"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4173,
+      "sha256": "3312650d0d97a8722702c349a1c3d39249ee66d3285953e7f7d81958f5c8326a"
+    },
+    {
+      "path": "bin/aipay-watch.mjs",
+      "bytes": 6877,
+      "sha256": "130f5367dbbe29e311ec881ee6fd109bc8559c66c4e97f343e1b6ed2844b0b45"
+    },
+    {
+      "path": "package.json",
+      "bytes": 529,
+      "sha256": "79e19a8526f16fe6f54bed5ef23f2b817e8102b98cb51eeb0fadd2b4d2d98e77"
+    },
+    {
+      "path": "src/api.mjs",
+      "bytes": 3595,
+      "sha256": "adffc384655972046ee384983152f1e9e2058136ffd92b2fa7d730ee5a07e972"
+    },
+    {
+      "path": "src/evm.mjs",
+      "bytes": 4191,
+      "sha256": "59c61e4960406ebd79f5656bc4056fd22f9028aa567152c0a66ef99520be5ed5"
+    },
+    {
+      "path": "src/index.mjs",
+      "bytes": 381,
+      "sha256": "9ce724731771b5023cc9981a3d96953a66c9c782744b0ed2209fdbea05a6ccb2"
+    },
+    {
+      "path": "src/solana.mjs",
+      "bytes": 4510,
+      "sha256": "3fe1fa360a3512e375f353e3c7ce05c988e7ee16e4261e3a72f235b5024b50d9"
+    },
+    {
+      "path": "src/watch.mjs",
+      "bytes": 12616,
+      "sha256": "5d167198f532044a67112d212df5b1d21967270d1d19c4ab7e6bb232fa6df8f7"
+    }
+  ],
+  "policy": {
+    "mode": "allowlist",
+    "allow_paths": [
+      "sdk/aipay-watch/{package.json,README.md,bin/*.mjs,src/*.mjs}"
+    ],
+    "deny_paths": [
+      "(^|\\/)node_modules(\\/|$)",
+      "(^|\\/)\\.env",
+      "(^|\\/)\\.git(\\/|$)",
+      "(^|\\/)\\.aipay",
+      "(^|\\/)\\.npmrc$",
+      "(^|\\/)\\.netrc$",
+      "(^|\\/)(state|keystore|approval)\\.json$",
+      "\\.tgz$",
+      "\\.log$"
+    ],
+    "deny_content": [
+      "github_pat",
+      "openai_key",
+      "nvidia_key",
+      "pem_block",
+      "telegram_bot",
+      "cloudflare_token",
+      "internal_secret",
+      "merchant_key"
+    ],
+    "note": "The SDK can only report a transaction hash; the server still verifies it. Nothing here holds a key or moves funds."
+  },
+  "usage": {
+    "install": "bash install-sdk.sh   # AIPAY_WATCH_VERSION=<v>",
+    "run": "node package/bin/aipay-watch.mjs --api-key aipay_sk_… --rpc bsc=https://your-node",
+    "read_only": "add --read-only to report nothing and only print what it finds",
+    "confirm": "POST /v1/orders/:reference/confirm {txHash} — 200 confirmed, 202 not deep enough, 409 does not pay this order"
+  }
+}

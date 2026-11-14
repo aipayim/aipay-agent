@@ -1,3 +1,4 @@
 agent/**
 src/lib/**
-# reachable only from: agent/cli.ts, agent/mcp-server.ts
+sdk/aipay-watch/**
+# reachable only from: agent/cli.ts, agent/mcp-server.ts (runtime), sdk/aipay-watch (watcher)

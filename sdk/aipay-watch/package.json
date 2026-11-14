@@ -1,0 +1,25 @@
+{
+  "name": "aipay-watch",
+  "version": "0.1.0",
+  "description": "Merchant-side watcher for AIPAY cloud orders: discovers a payment with your own RPC quota and reports only the transaction hash.",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "aipay-watch": "bin/aipay-watch.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node bin/aipay-watch.mjs"
+  }
+}
